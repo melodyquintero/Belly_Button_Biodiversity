@@ -1,3 +1,3 @@
-web: gunicorn Belly-button-biodiversity.app:app
+web: gunicorn app:app
 
 release: python manage.py db upgrade
