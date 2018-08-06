@@ -30,18 +30,18 @@ function buildCharts(sample) {
 
     // @TODO: Build a Bubble Chart using the sample data
 
-    // var BubbleTrace = {
-    //   x: data.otu_ids,
-    //   y: data.sample_values,
-    //   mode='markers',
-    //   text: data.otu_labels,
-    //   marker: {
-    //     color: data.otu_ids,
-    //     size: data.sample_values
-    //   }
-    // };
+    var BubbleTrace = {
+      x: data.otu_ids,
+      y: data.sample_values,
+      mode='markers',
+      text: data.otu_labels,
+      marker: {
+        color: data.otu_ids,
+        size: data.sample_values
+      }
+    };
 
-    // Plotly.newPlot('bubble', [BubbleTrace]);
+    Plotly.newPlot('bubble', [BubbleTrace]);
 
 
     // @TODO: Build a Pie Chart
