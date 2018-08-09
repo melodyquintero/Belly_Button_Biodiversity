@@ -33,7 +33,7 @@ function buildCharts(sample) {
     var BubbleTrace = {
       x: data.otu_ids,
       y: data.sample_values,
-      mode='markers',
+      mode:'markers',
       text: data.otu_labels,
       marker: {
         color: data.otu_ids,
@@ -41,7 +41,11 @@ function buildCharts(sample) {
       }
     };
 
-    Plotly.newPlot('bubble', [BubbleTrace]);
+    var layout = {
+      xaxis: { title: "OTU ID"},
+    };
+
+    Plotly.newPlot('bubble', [BubbleTrace],layout);
 
 
     // @TODO: Build a Pie Chart
